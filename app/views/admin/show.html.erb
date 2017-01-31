@@ -1,0 +1,53 @@
+<div class="container">
+
+	<%= @admin.email %>
+
+
+
+		<div class="whatever">
+			<input type="text" id="edit-this" placeholder="Edit Main Text">
+		</div>
+
+		<input type='button' onclick='edit()' value='Change It'/><br>
+
+			
+		<h1> Breakfast Items</h1>
+
+		<% Menu.where(category: 'Breakfast').all.each do |breakfast| %>
+			Name: <%= breakfast.menu_item %><br>
+			Category: <%= breakfast.category %><br>
+			Description: <%= breakfast.description %><br>
+			Price: <%= breakfast.price %><br>
+
+			<a href="/menus/<%= breakfast.id %>/edit">Go To Page</a><br><br>
+
+
+		<% end %>
+
+		<h2>Paninis </h2>
+
+
+		<% Menu.where(category: 'Paninis').all.each do |panini| %>
+
+			Name: <%= panini.menu_item %><br>
+			Category: <%= panini.category %><br>
+			Description: <%= panini.description %><br>
+			Price: <%= panini.price %><br>
+			<a href="/menus/<%= panini.id %>/edit">Go To Page</a><br><br>
+
+		<% end %>
+
+		<h2>Salads </h2>
+
+
+		<% Menu.where(category: 'Salads').all.each do |salad| %>
+
+			Name: <%= salad.menu_item %><br>
+			Category: <%= salad.category %><br>
+			Description: <%= salad.description %><br>
+			Price: <%= salad.price %><br>
+			<a href="/menus/<%= salad.id %>/edit">Go To Page</a><br><br>
+
+		<% end %>
+
+</div>

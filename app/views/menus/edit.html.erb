@@ -1,0 +1,24 @@
+<div class="container">
+
+	<%= form_for @menu do |f| %>
+
+		<%= f.hidden_field :id, value: @menu.id %>
+		<%= f.label :menu_item, value: 'Item Name' %>
+		<%= f.text_field :menu_item %><br />
+
+		<%= f.label :category, value: 'Category' %>
+		<%= f.text_field :category %><br />
+
+		<%= f.label :description, value: 'Description' %>
+		<%= f.text_field :description %><br />
+
+		<%= f.label :price, value: 'Price' %>
+		<%= f.text_field :price %><br />
+
+
+
+
+
+		<%= f.submit 'Edit Item' %>
+	<% end %>
+</div>
