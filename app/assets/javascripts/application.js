@@ -27,6 +27,18 @@
             	}, 1000);
          });
 
+      $("#contactit").click(function (){
+         $('html, body').animate({
+           scrollTop: $("#contact").offset().top
+              }, 1000);
+         });
+
+      $("#locateit").click(function (){
+         $('html, body').animate({
+           scrollTop: $("#locate").offset().top
+              }, 1000);
+         });
+
 
      $('#homeit').click(function() {
      	$('html, body').animate({
@@ -39,10 +51,12 @@
 
     $(window).scroll(function() { 
         if ($(document).scrollTop() > 500) { // check if user scrolled more than 50 from top of the browser window
-          $(".navbar-fixed-top").fadeIn(3000).css("background-color", "black"); 
-          $(".navbar-brand").css("border", "1px", "solid", "black")
+          $(".navbar-fixed-top").css("background-color", "#F1F1F4"); 
+          $("ul.nav li a").css("color", "black");
+          $(".navbar-brand").css("border", "1px", "solid", "black");
         } else {
-          $(".navbar-fixed-top").css("background-color", "transparent"); // if not, change it back to transparent
+          $(".navbar-fixed-top").css("background-color", "transparent");
+          $("ul.nav li a").css("color", "white"); // if not, change it back to transparent
         }
     });
 });

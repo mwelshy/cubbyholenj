@@ -10,22 +10,23 @@
 		<div class="container-fluid main-header" id="home">
 
 			<div class="container">
-
 				<div class="row">
 					<div class="nav navbar-nav navbar-fixed-top">
 						<div class="navbar-brand">
 							<img src="assets/Cubbyhole2logo.png">
 						</div>
 					
-					  	<ul class="nav navbar-nav navbar-right top-nav">
+					  	<ul class="nav navbar-nav navbar-right top-nav" id="collapse">
 
 
 			  		<% if current_user %>
-			  			<li><a href="/admin/<%=current_user.id.to_s%>">Admin Profile</a></li>
+			  			<li class="changeli"><a href="/admin/<%=current_user.id.to_s%>">Admin Profile</a></li>
 			 			<li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
 			  		<% else %> 
 			  			<li><a class="btn btn-primary nav-btn" id="homeit">Home</a></li>
 			  			<li><a class="btn btn-primary nav-btn" id="aboutit">About</a></li>
+			  			<li><a class="btn btn-primary nav-btn" id="locateit">Location</a></li>
+			  			<li><a class="btn btn-primary nav-btn" id="contactit">Contact Us</a></li>
 			  			<li><%= link_to('Log In', new_user_session_path, :class => 'btn btn-primary nav-btn')%></li>
 						<li><%= link_to('Register', new_user_registration_path, :class => 'btn btn-primary nav-btn')  %></li>
 						
@@ -46,11 +47,9 @@
 					</div>
 				</div>
 
-				<div class="margin-bot">
-						
+				<div class="margin-bot">						
 				</div>
 			</div>
-
 		</div>
 
 
@@ -60,37 +59,76 @@
 		<div class="container-fluid first-content" id="about">
 			<div class="container">
 				<div class="margin"></div>
-				<div class="row">
-					<div class="col-md-6 info1">
-						<h4>The Cubby Hole<h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, adipisci tempore obcaecati. Necessitatibus, consectetur commodi mollitia, qui hic in cum quasi suscipit atque laudantium facere veritatis! Doloribus aliquid recusandae, deserunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum ex eligendi modi totam deserunt quia consequuntur possimus omnis tempora facere tenetur, debitis excepturi. Error excepturi expedita consectetur sunt qui eius! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores velit, odit quam, quae expedita fugiat dicta eos, aspernatur quibusdam voluptatum consequuntur ut rem doloremque fuga corporis error sapiente aliquam possimus!. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit illo rerum nostrum sed praesentium numquam magni laboriosam. Quisquam ratione, assumenda delectus, facilis, minima vel provident porro officia obcaecati temporibus ducimus.</p>
-					</div>
+					<h2 class="first-content-title">About Us</h2>
+						<div class="line-break"></div>
+							<div class="row">
+								<div class="margin-text"></div>
+									<div class="col-md-12">
+										<h4>The Cubby Hole</h4>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, adipisci tempore obcaecati. Necessitatibus, consectetur commodi mollitia, qui hic in cum quasi suscipit atque laudantium facere veritatis! Doloribus aliquid recusandae, deserunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum ex eligendi modi totam deserunt quia consequuntur possimus omnis tempora facere tenetur, debitis excepturi. Error excepturi expedita consectetur sunt qui eius! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores velit, odit quam, quae expedita fugiat dicta eos, aspernatur quibusdam voluptatum consequuntur ut rem doloremque fuga corporis error sapiente aliquam possimus!. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit illo rerum nostrum sed praesentium numquam magni laboriosam. Quisquam ratione, assumenda delectus, facilis, minima vel provident porro officia obcaecati temporibus ducimus.</p>
+									</div>
+								<div class="margin-bot"></div>
 
-
-					<div class="col-md-6 info2">
-							<img src="assets/redbeanscubby.jpg" class="img-responsive">
-
-
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col-md-5">
-						<h3>Breakfast</h3>
-						<% Menu.where(category: "Breakfast").all.each do |breakfast| %>
-							<b>Name:</b> <%= breakfast.menu_item %> 
-							<b>Description:</b> <%= breakfast.description%><br>
-							
-						<% end %>
-
+						</div>
 					</div>
 				</div>
 
+
+
+		<div class="second-content-wrapper">
+			<div class="second-content">
+				<div class="row">
+					<div class="col-md-4 col-md-offset-2">
+						<img src="assets/cubby3-.jpg" style="width:80%">
+	
+
+					</div>
+
+						<div class="col-md-3">
+							<div class="margin-text"></div>
+							<h3>Our Menu</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla provident ut eveniet iste deleniti porro. Adipisci iste aut laudantium rem natus, tenetur, necessitatibus provident, nostrum expedita eaque ex consequatur ut! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores tempora, pariatur nam magnam atque fugit provident mollitia repudiandae, sapiente unde labore. Numquam alias nulla cumque quis veritatis veniam unde illo.</p>
+
+							<div class="margin-text"></div>
+							<center><button class="btn btn-lg content-btn">Check out our Menu</button></center>
+						</div>
+
+				</div>
+					
+			</div>
 				
+		</div>
 
 
+
+
+
+
+		<div class="third-content-wrapper" id="locate">
+			<div class="third-content">
+				<div class="col-md-5 col-md-offset-2">
+					<h3>Location</h3>
+
+				</div>
+				
 			</div>
 		</div>
+
+
+
+		<div class="fourth-content-wrapper" id="contact">
+			<div class="fourth-content">
+				<div class="col-md-7 col-md-offset-2">
+				<h3>Newsletter Contact</h3>
+					
+				</div>
+				
+			</div>
+		</div>
+
+
+
+
 
 
 <!-- footer -->
@@ -103,7 +141,6 @@
 
 
 
-		<!-- begin second content -->
 
 
 
