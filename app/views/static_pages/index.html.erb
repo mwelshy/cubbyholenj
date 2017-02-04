@@ -8,33 +8,33 @@
 	<!-- begin header -->
 
 		<div class="container-fluid main-header" id="home">
-
-			<div class="container">
-				<div class="row">
-					<div class="nav navbar-nav navbar-fixed-top">
-						<div class="navbar-brand">
-							<img src="assets/Cubbyhole2logo.png">
-						</div>
-					
-					  	<ul class="nav navbar-nav navbar-right top-nav" id="collapse">
-
-
-			  		<% if current_user %>
-			  			<li class="changeli"><a href="/admin/<%=current_user.id.to_s%>">Admin Profile</a></li>
-			 			<li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
-			  		<% else %> 
-			  			<li><a class="btn btn-primary nav-btn" id="homeit">Home</a></li>
-			  			<li><a class="btn btn-primary nav-btn" id="aboutit">About</a></li>
-			  			<li><a class="btn btn-primary nav-btn" id="locateit">Location</a></li>
-			  			<li><a class="btn btn-primary nav-btn" id="contactit">Contact Us</a></li>
-			  			<li><%= link_to('Log In', new_user_session_path, :class => 'btn btn-primary nav-btn')%></li>
-						<li><%= link_to('Register', new_user_registration_path, :class => 'btn btn-primary nav-btn')  %></li>
-						
-
-					<% end %>
-			   			</ul>
-			   	</div>
-			   </div>
+				<nav class="navbar navbar-fixed-top">
+					  <div class="container-fluid">
+					    <div class="navbar-header">
+					      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNav">
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>                        
+					      </button>
+					      <a class="navbar-brand" href="#"><img src="assets/Cubbyhole2logo.png"></a>
+					    </div>
+					    <div class="collapse navbar-collapse" id="topNav">
+					      <ul class="nav navbar-nav navbar-right">
+					        <li class="active"><a href="#">Home</a></li>
+					        <li class="dropdown">
+					          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+					          <ul class="dropdown-menu">
+					            <li class="nav-btn"><a href="#">Page 1-1</a></li>
+					            <li><a href="#">Page 1-2</a></li>
+					            <li><a href="#">Page 1-3</a></li>
+					          </ul>
+					        </li>
+					        <li><a href="#">Page 2</a></li>
+					        <li><a href="#">Page 3</a></li>
+					      </ul>
+					    </div>
+					  </div>
+					</nav>
 
 
 					
@@ -51,6 +51,7 @@
 				</div>
 			</div>
 		</div>
+
 
 
 
