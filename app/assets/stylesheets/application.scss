@@ -18,12 +18,16 @@
 @import "font-awesome";
 
 
+$main-font: 'Montserrat', sans-serif;
+$second-font: 'Raleway', sans-serif;
+
+
 .margin {
 	margin-top: 180px;
 }
 
 .margin-bot {
-	margin-bottom: 200px;
+	margin-bottom: 100px;
 }
 
 
@@ -44,6 +48,38 @@
 .content-btn {
 	background-color: #5d2a74;
 	color: white;
+}
+
+.footer-wrap {
+	background-color: #383838;
+	background-size: 100% 100%;
+	font-size: 22px;
+	color: white;
+	padding-bottom: 100px;
+
+	.footer-link {
+		color: white;
+	}
+
+	.footer-text {
+		font-size: 12px;
+		font-family: $main-font;
+		padding-left: 110px;
+	}
+
+
+	.navbar-nav {
+
+		li {
+			padding: 25px;
+			color: white;
+
+			a {
+				color: white;
+			}
+		}
+
+	}
 }
 
 

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Cubby Hole NJ</title>
+</head>
+<body>
+
+	<!-- begin header -->
+
+		<div class="container-fluid menu-header" id="home">
+				<nav class="navbar navbar-fixed-top">
+					  <div class="container-fluid">
+					    <div class="navbar-header">
+					      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNav">
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>                        
+					      </button>
+					      <a class="navbar-brand" href="/"><img src="assets/Cubbyhole2logo.png"></a>
+					    </div>
+					    <div class="collapse navbar-collapse" id="topNav">
+					      <ul class="nav navbar-nav navbar-right nav-btn">
+					        <li><a href="/"><i class="fa fa-home" style="font-size: 22px"></i>Home</a></li>
+					      </ul>
+					    </div>
+					  </div>
+					</nav>
+
+
+
+
+
+					
+				<div class="margin">
+					<div class="row main-nav">
+						<div class="col-md-8 col-md-offset-2 text-center">
+							
+								
+						</div>
+					</div>
+				</div>
+
+				<div class="margin-bot">						
+				</div>
+			</div>
+		</div>
+
+
+
+
+		<!-- begin menu content -->
+
+
+		<div class="container-fluid menu-content" id="about">
+			<div class="container">
+				<div class="margin"></div>
+					<h2 class="first-content-title" style="text-align:left;">The Menu</h2>
+						<div class="line-break"></div>
+							<div class="row">
+								<div class="margin-text"></div>
+									<div class="col-md-12">
+										<h4 style="text-align:left;">Breakfast</h4>
+										<div class="line-break"></div>
+											<% Menu.where(category: "Breakfast").each  do |breakfast | %>
+												<div class="row">
+													<div class="col-md-6">
+														<h6><i class="fa fa-cutlery" aria-hidden="true"></i> <%= breakfast.menu_item %></h6><br>
+														<p style="text-align: left;"><%= breakfast.description%></p>
+													</div>
+
+													
+													<div class="col-md-1 col-md-offset-5">
+													<h6><i class="fa fa-dollar" aria-hidden="true"></i> <%= breakfast.price %></h6><br>
+													</div>
+												</div>
+
+											<% end %>
+
+										<h4 style="text-align:left">Paninis</h4>
+										<div class="line-break"></div>
+											<% Menu.where(category: "Paninis").each  do |paninis| %>
+												<div class="row">
+													<div class="col-md-6">
+														<h6><i class="fa fa-cutlery" aria-hidden="true"></i> <%= paninis.menu_item %></h6><br>
+														<p style="text-align: left;"><%= paninis.description%></p>
+													</div>
+													<div class="col-md-1 col-md-offset-5">
+														<h6><i class="fa fa-dollar" aria-hidden="true"></i> <%= paninis.price %></h6><br>
+													</div>
+												</div>
+
+											<% end %>
+											
+
+
+										<h4 style="text-align:left">Salads</h4>
+										<div class="line-break"></div>
+										<% Menu.where(category: "Salads").each  do |salads| %>
+												<div class="row">
+													<div class="col-md-6">
+														<h6><i class="fa fa-cutlery" aria-hidden="true"></i> <%= salads.menu_item %></h6><br>
+														<p style="text-align: left;"><%= salads.description%></p>
+													</div>
+													<div class="col-md-1 col-md-offset-5">
+														<h6><i class="fa fa-dollar" aria-hidden="true"></i> <%= salads.price %></h6><br>
+													</div>
+												</div>
+
+												<% end %>
+											
+									</div>
+								<div class="margin-bot"></div>
+
+						</div>
+					</div>
+				</div>
+
+
+
+<!-- footer -->
+
+	<footer>	
+		<div class="footer-wrap">
+			
+		</div>
+	</footer>
+
+
+
+
+
+
+
+
+	
+
+
+
+
+</body>
+</html>

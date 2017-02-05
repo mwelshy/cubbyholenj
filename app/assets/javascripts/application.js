@@ -50,13 +50,13 @@
 
 
     $(window).scroll(function() { 
-        if ($(document).scrollTop() > 500) { // check if user scrolled more than 50 from top of the browser window
+        if ($(document).scrollTop() > 10) { // check if scrolled more than 10 from top of the browser window
           $(".navbar-fixed-top").css("background-color", "#F1F1F4"); 
-          $("ul.nav li a").css("color", "black");
+          $("ul.nav li a").css("color", "#5d2a74");
           $(".navbar-brand").css("border", "1px", "solid", "black");
         } else {
           $(".navbar-fixed-top").css("background-color", "transparent");
-          $("ul.nav li a").css("color", "white"); // if not, change it back to transparent
+          $("ul.nav li a").css("color", "white"); // if not, change it back to white
         }
     });
 });

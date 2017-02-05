@@ -2,10 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$main-font: 'Montserrat', sans-serif;
+$second-font: 'Raleway', sans-serif;
+
 
 .top-nav {
 	margin-right: 20px;
 }
+
+.navbar {
+	a {
+		color: white;
+	}
+}
+
 
 
 .navbar-brand {
@@ -29,7 +39,7 @@
 
 .main-header {
 	background-image: url('cubbyholehero.jpg');
-	background-size: 100%;
+	background-size: 100% 100%;
 	background-attachment: fixed;
 	color: white;
 
@@ -54,6 +64,8 @@
 
 	}
 }
+
+
 
 
 .info2 {
@@ -90,6 +102,7 @@
 	background-size: 100% 100%;
 	text-align: center;
 	margin-bottom: 100px;
+	font-family: $second-font;
 
 	.margin {
 		margin-top: 100px;
@@ -119,17 +132,46 @@
 	background-color: transparent;
 	margin-top: 35px;
 	border: none;
+	margin-right: 50px;
 
 }
 
-ul {
-	li .btn:hover {
+.icon-bar {
+	
+	background-color: white;
+	border: 1px, solid, white;
+	margin-top: 50px;
+
+}
+
+
+.navbar-nav {
+	font-family: $main-font;
+	color: white;
+	text-align:center;
+	li a:hover {
 		background-color: transparent;
- 
+
+		a:active {
+			color: white;
+			background-color: transparent;
+		}
 	}
-
-
 }
+
+
+.navbar-right {
+	padding-left: 50px;
+}
+
+// ul {
+// 	li .btn:hover {
+// 		background-color: transparent;
+ 
+// 	}
+
+
+// }
 
 
 .second-content-wrapper {
@@ -143,6 +185,7 @@ ul {
 	.second-content {
 		color: black;
 		margin-bottom: 50px;
+		font-family: $second-font;
 		
 		h3 {
 			text-align:center;
@@ -150,8 +193,13 @@ ul {
 
 		img {
 			border-radius: 17%;
-			margin-top: 15px;
+			margin-top: 50px;
 			margin-left:50px;
+		}
+
+		a {
+			text-decoration: none;
+			color: white;
 		}
 	}
 }
@@ -159,19 +207,119 @@ ul {
 .third-content-wrapper {
 	color: #F1F1F4;
 	background-color: white;
-	height: 400px;
+	height: 100%;
 	text-align: left;
+
+		.third-content {
+		color: black;
+		margin-bottom: 50px;
+		font-family: $second-font;
+		
+		h3 {
+			text-align:center;
+		}
+
+		img {
+			border-radius: 17%;
+			margin-top: 50px;
+			margin-left:50px;
+		}
+
+		a {
+			text-decoration: none;
+			color: white;
+		}
+	}
+
 }
 
 .fourth-content-wrapper {
 	background-color: #5d2a74;
 	height: 350px;
+	text-align: center;
 
 }
 
 
 
-.footer-wrap {
-	background-color: #383838;
-	height: 400px;
+// Footer 
+
+
+
+// .footer-wrap {
+// 	background-color: #383838;
+// 	background-size: 100% 100%;
+// 	font-size: 22px;
+// 	color: white;
+// 	padding-bottom: 100px;
+
+
+// 	.navbar-nav {
+
+// 		li {
+// 			padding: 25px;
+// 			color: white;
+
+// 			a {
+// 				color: white;
+// 			}
+// 		}
+
+// 	}
+// }
+
+
+
+
+
+// Menu Items
+
+.menu-header {
+	// background-image: url('foodcollage.jpg');
+	// background-size: 100%;
+	height: 35px;
+
+	color: white;
+
+
+	.header-image {
+		border-radius: 50%;
+		width: 300px;
+		margin:0 auto;
+
+	}
+
+	.jumbotron {
+	margin-top: 60px;
+	padding-bottom: 100px;
+	color: white;
+	background-color: rgba(0,0,0,0);
+	font-size: 22px;
+	}
+
+	.contact-btn {
+		background-color: transparent;
+		border: 1px solid black;
+
+	}
+}
+
+.menu-content {
+	background-color: white;
+	background-size: 100% 100%;
+	text-align: center;
+	margin-bottom: 100px;
+	font-family: $second-font;
+
+	.margin {
+		margin-top: 100px;
+
+	}
+
+	h6 {
+		font-size: 22px;
+		text-align: left;
+	}
+
+	
 }

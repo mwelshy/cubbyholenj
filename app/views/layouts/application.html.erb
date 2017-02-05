@@ -6,9 +6,38 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet">
   </head>
 
   <body>
+
+
     <%= yield %>
+      	<footer>	
+			<div class="footer-wrap">
+			<div class="container">
+				<div class="footer">
+						<div class="row">
+							<div class="col-md-5 col-md-offset-4">
+								
+								<ul class="nav navbar-nav">
+									<li><i class="fa fa-facebook"></i></li>
+									<li><i class="fa fa-twitter"></i></li>
+									<li><i class="fa fa-instagram"></i></li>
+									<li><i class="fa fa-snapchat"></i></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-6 col-md-offset-3 footer-text">
+								2017 The Cubby Hole  Website  |  michael welsh
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</footer>
   </body>
 </html>

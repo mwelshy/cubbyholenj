@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
   get 'admin/:id' => 'admin#show'
 
+  get '/menu' => 'static_pages#menu'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
 
