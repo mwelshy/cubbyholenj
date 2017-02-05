@@ -1,57 +1,60 @@
 <div class="container">
 
-	<%= @admin.email %>
+		<center><h2>Admin Center</h2>
+		<br />
+		<h3>Welcome <%= current_user.email %></h3>
+		</center>
 
+	<%= link_to('Add Menu Item', new_menu_path, :class => 'btn btn-danger') %>
+	<%= link_to('Logout', destroy_user_session_path, :method => :delete, :class => 'btn btn-danger') %>
 
-
-
-
-
-		<div class="whatever">
-			<input type="text" id="edit-this" placeholder="Edit Main Text">
-		</div>
-
-		<input type='button' onclick='edit()' value='Change It'/><br>
-
-			
+	<div class="row">
 		<h1> Breakfast Items</h1>
 
 		<% Menu.where(category: 'Breakfast').all.each do |breakfast| %>
+		<div class="col-md-2">
 			Name: <%= breakfast.menu_item %><br>
 			Category: <%= breakfast.category %><br>
 			Description: <%= breakfast.description %><br>
 			Price: <%= breakfast.price %><br>
 
-			<a href="/menus/<%= breakfast.id %>/edit">Go To Page</a><br><br>
+			<a href="/menus/<%= breakfast.id %>/edit" class="btn content-btn ">Edit Item</a><br><br>
+		</div>
 			
 
 
 		<% end %>
+	</div>
 
+
+	<div class="row">
 		<h2>Paninis </h2>
-
-
 		<% Menu.where(category: 'Paninis').all.each do |panini| %>
-
+		<div class="col-md-2">
 			Name: <%= panini.menu_item %><br>
 			Category: <%= panini.category %><br>
 			Description: <%= panini.description %><br>
 			Price: <%= panini.price %><br>
-			<a href="/menus/<%= panini.id %>/edit">Go To Page</a><br><br>
+			<a href="/menus/<%= panini.id %>/edit" class="btn content-btn">Edit Item</a><br><br>
+		</div>
 
 		<% end %>
+	</div>
 
+	<div class="row">
 		<h2>Salads </h2>
-
+		
 
 		<% Menu.where(category: 'Salads').all.each do |salad| %>
-
+		<div class="col-md-2">
 			Name: <%= salad.menu_item %><br>
 			Category: <%= salad.category %><br>
 			Description: <%= salad.description %><br>
 			Price: <%= salad.price %><br>
-			<a href="/menus/<%= salad.id %>/edit">Go To Page</a><br><br>
+			<a href="/menus/<%= salad.id %>/edit" class="btn content-btn">Edit Item</a><br><br>
+		</div>
 
 		<% end %>
+	</div>
 
 </div>

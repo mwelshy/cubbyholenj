@@ -7,7 +7,8 @@
 		<%= f.text_field :menu_item %><br />
 
 		<%= f.label :category, value: 'Category' %>
-		<%= f.text_field :category %><br />
+		<% categories = ["Breakfast", "Paninis", "Salads"] %>
+		<%= f.select(:category, options_for_select(categories)) %><br />
 
 		<%= f.label :description, value: 'Description' %>
 		<%= f.text_field :description %><br />
