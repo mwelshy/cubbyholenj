@@ -4,22 +4,56 @@
 
 		<%= f.hidden_field :id, value: @menu.id %>
 		<%= f.label :menu_item, value: 'Item Name' %>
-		<%= f.text_field :menu_item %><br />
+		<%= f.text_field :menu_item, :class => 'form-control' %><br />
 
 		<%= f.label :category, value: 'Category' %>
 		<% categories = ["Breakfast", "Paninis", "Salads"] %>
 		<%= f.select(:category, options_for_select(categories)) %><br />
 
 		<%= f.label :description, value: 'Description' %>
-		<%= f.text_field :description %><br />
+		<%= f.text_field :description, :class => 'form-control' %><br />
 
 		<%= f.label :price, value: 'Price' %>
-		<%= f.text_field :price %><br />
+		<%= f.text_field :price, :class => 'form-control' %><br />
 
 
 
 
 
-		<%= f.submit 'Edit Item' %>
+		<%= f.submit 'Edit Item', :class => 'form-control' %>
 	<% end %>
 </div>
+
+<div class="container">
+		<div class="row">
+			<div class="col-md-5 col-md-offset-3">
+
+
+				<%= form_for Menu.create do |f| %>
+				<h2>Create Menu Item</h2>
+
+					<%= f.label :menu_item, value: 'Item Name' %>
+					<%= f.text_field :menu_item, :class => 'form-control' %><br />
+
+					<%= f.label :category, value: 'Category' %>
+					<% categories = ["Breakfast", "Paninis", "Salads"] %>
+
+					<%= f.select(:category, options_for_select(categories)) %><br />
+
+					<%= f.label :description, value: 'Description (information about the menu item)' %>
+					<%= f.text_field :description, :class => 'form-control' %><br />
+
+					<%= f.label :price, value: 'Price (Decimal)' %>
+					<%= f.text_field :price, :class => 'form-control' %><br />
+
+
+					<%= f.submit 'Create Item', :class => 'btn content-btn form-control' %>
+
+				<% end %>
+
+
+			</div>
+		</div>
+</div>
+
+<div class="big-margin"></div>
