@@ -16,9 +16,9 @@
 			Name: <%= breakfast.menu_item %><br>
 			Category: <%= breakfast.category %><br>
 			Description: <%= breakfast.description %><br>
-			Price: <%= breakfast.price %><br>
+			Price: <%= breakfast.price %><br><br>
 
-			<a href="/menus/<%= breakfast.id %>/edit" class="btn content-btn ">Edit Item</a><br><br>
+			<a href="/menus/<%= breakfast.id %>/edit" class="btn content-btn ">Edit Item</a><br>
 		</div>
 			
 
@@ -56,5 +56,14 @@
 
 		<% end %>
 	</div>
+
+
+
+<h2> Emails </h2>
+	<% Email.all.each do |email| %>
+		Name: <%= email.fname %><br>
+		Last Name: <%= email.lname %><br>
+		Email: <%= email.email %>
+	<% end %>
 
 </div>

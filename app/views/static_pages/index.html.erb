@@ -25,7 +25,11 @@
 					        </li>
 					        <li><a id="locateit"><i class="fa fa-home" style="font-size: 22px"></i>  Location</a></li>
 					        <li><a id="contactit"><i class="fa fa-phone" style="font-size: 22px"></i>  Contact</a></li>
+
+					        <% if current_user %>
+					        <li><a href="/admin/<%= current_user.id.to_s %>">Admin Page</a></li>
 					        <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+					        <% end %>
 					      </ul>
 					    </div>
 					  </div>
@@ -128,11 +132,35 @@
 		</div>
 
 
-
 		<div class="fourth-content-wrapper" id="contact">
 			<div class="fourth-content">
-				<div class="col-md-7 col-md-offset-2">
-				<h3>Newsletter Contact</h3>
+				<div class="container">
+					<div class="col-md-12">
+					<h3>Join Our Newsletter!</h3>
+						<div class="margin-text"></div>
+						<div class="row">
+							<div class="col-md-6">
+								<%= form_for Email.new do |f| %>
+									<%= f.label :fname, 'First Name' %><br>
+									<%= f.text_field :fname, :placeholder => "First Name", :class => 'form-control' %><br>
+							</div>
+							<div class="col-md-6">
+									<%= f.label :lname, 'Last Name' %><br>
+									<%= f.text_field :lname, :placeholder => "Last Name", :class => 'form-control' %><br>
+								</div>
+						</div>
+
+									<%= f.label :email, 'Email' %><br>
+										<%= f.text_field :email, :placeholder => "Email", :class => 'form-control' %><br>
+
+										<%= f.submit 'Join Our Email List', :class => 'btn content-btn form-control' %>
+
+							<% end %>
+						<div class="margin-bot"></div>
+				</div>
+
+
+
 
 					
 				</div>
@@ -145,26 +173,10 @@
 
 
 
+
+
 <!-- footer -->
 
-<!-- 	<footer>	
-		<div class="footer-wrap">
-			<div class="footer">
-				<div class="row">
-					<div class="col-md-7 col-md-offset-5">
-						<div class="margin-text"></div>
-						<ul class="nav navbar-nav">
-							<li><a href="https://www.facebook.com/Thecubbyhole2/"><i class="fa fa-facebook"></i></a></li>
-							<li><i class="fa fa-twitter"></i></li>
-							<li><i class="fa fa-instagram"></i></li>
-							<li><i class="fa fa-facebook"></i></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			
-		</div>
-	</footer> -->
 
 
 

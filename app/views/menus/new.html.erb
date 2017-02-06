@@ -17,13 +17,15 @@
 					<%= f.label :description, value: 'Description (information about the menu item)' %>
 					<%= f.text_field :description, :class => 'form-control' %><br />
 
-					<%= f.label :price, value: 'Price (Decimal)' %>
+					<%= f.label :price, value: 'Price (Decimal - 3 Digits)' %>
 					<%= f.text_field :price, :class => 'form-control' %><br />
 
 
 					<%= f.submit 'Create Item', :class => 'btn content-btn form-control' %>
 
 				<% end %>
+				<br />
+					<a class="btn btn-danger form-control" href="/admin/<%= current_user.id.to_s %>">Cancel New Item</a>
 
 
 			</div>
