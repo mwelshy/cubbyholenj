@@ -35,10 +35,14 @@ $second-font: 'Raleway', sans-serif;
 	margin-bottom: 100px;
 }
 
+.margin-bot2 {
+	margin-bottom: 200px;
+}
+
 
 	.btn:hover {
-		background-color: #5d2a74;
-		color: white;
+		background-color: transparent;
+		color: black;
 	}
 
 	.btn:active {
@@ -51,9 +55,15 @@ $second-font: 'Raleway', sans-serif;
 
 
 .content-btn {
-	background-color: #5d2a74;
-	color: white;
+	// background-color: #5d2a74;
+	background-color: transparent;
+
+	// color: white;
+	color: black;
+	border: 1px solid black;
+	border-radius: 0px;
 	font-family: $main-font;
+
 }
 
 .footer-wrap {
@@ -62,6 +72,7 @@ $second-font: 'Raleway', sans-serif;
 	font-size: 22px;
 	color: white;
 	padding-bottom: 100px;
+	text-align:center;
 
 	.footer-link {
 		color: white;
@@ -70,7 +81,11 @@ $second-font: 'Raleway', sans-serif;
 	.footer-text {
 		font-size: 12px;
 		font-family: $main-font;
-		padding-left: 110px;
+		text-align:center;
+	}
+
+	.footer-social {
+		padding-right:10px;
 	}
 
 
@@ -86,6 +101,26 @@ $second-font: 'Raleway', sans-serif;
 		}
 
 	}
+}
+
+
+.menu-item {
+	background-color: #383838;
+	border: 1px solid black;
+	color: white;
+	height: 250px;
+}
+
+
+.whitespace {
+	margin-top: 800px;
+}
+
+
+#map {
+	height: 259px;
+	width: 100%;
+	border: 1px solid black;
 }
 
 

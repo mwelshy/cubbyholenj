@@ -41,12 +41,15 @@ $second-font: 'Raleway', sans-serif;
 	background-image: url('cubbyholehero.jpg');
 	background-size: 100% 100%;
 	background-attachment: fixed;
+	height: 100vh;
 	color: white;
 
 	.header-image {
 		border-radius: 50%;
 		width: 300px;
 		margin:0 auto;
+		margin-top: 175px;
+		border: 1px solid black;
 
 	}
 
@@ -117,6 +120,11 @@ $second-font: 'Raleway', sans-serif;
 	
 }
 
+.first-content-text {
+	margin-top: 50px;
+	text-align: center;
+}
+
 .line-break {
 	border-bottom: 1px solid black;
 }
@@ -184,14 +192,19 @@ $second-font: 'Raleway', sans-serif;
 		}
 
 		img {
-			border-radius: 17%;
+			// border-radius: 17%;
+			border: 1px solid black;
 			margin-top: 50px;
 			margin-left:50px;
 		}
 
 		a {
 			text-decoration: none;
-			color: white;
+			color: black;
+		}
+
+		.btn:hover {
+			background-color: transparent;
 		}
 	}
 }
@@ -232,8 +245,18 @@ $second-font: 'Raleway', sans-serif;
 	text-align: center;
 	font-family: $main-font;
 
+
+		.btn:hover {
+			background-color: transparent;
+			color: black;
+		}
+
 }
 
+
+.hours {
+	text-align: right;
+}
 
 
 

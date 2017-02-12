@@ -29,7 +29,7 @@
 
       $("#contactit").click(function (){
          $('html, body').animate({
-           scrollTop: $("#contact").offset().top
+           scrollTop: $("#locate").offset().top
               }, 1000);
          });
 
@@ -51,8 +51,9 @@
 
     $(window).scroll(function() { 
         if ($(document).scrollTop() > 10) { // check if scrolled more than 10 from top of the browser window
-          $(".navbar-fixed-top").css("background-color", "#F1F1F4"); 
-          $("ul.nav li a").css("color", "#5d2a74");
+          $(".navbar-fixed-top").css("background-color", "#F1F1F4");
+          $(".navbar-fixed-top").css("border-bottom", "black");  
+          $("ul.nav li a").css("color", "black");
           $(".navbar-brand").css("border", "1px", "solid", "black");
         } else {
           $(".navbar-fixed-top").css("background-color", "transparent");

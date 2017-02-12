@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   get 'static_pages/index'
 
+
   get 'admin/:id' => 'admin#show'
 
   get '/menu' => 'static_pages#menu'

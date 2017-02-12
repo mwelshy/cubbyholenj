@@ -12,13 +12,14 @@
 		<h1> Breakfast Items</h1>
 
 		<% Menu.where(category: 'Breakfast').all.each do |breakfast| %>
-		<div class="col-md-2">
+		<div class="col-md-2 menu-item">
+		<div class="margin-text"></div>
 			Name: <%= breakfast.menu_item %><br>
 			Category: <%= breakfast.category %><br>
 			Description: <%= breakfast.description %><br>
 			Price: <%= breakfast.price %><br><br>
 
-			<a href="/menus/<%= breakfast.id %>/edit" class="btn content-btn ">Edit Item</a><br>
+			<center><a href="/menus/<%= breakfast.id %>/edit" class="btn content-btn " style="color:white">Edit Item</a><br></center>
 		</div>
 			
 
@@ -30,12 +31,13 @@
 	<div class="row">
 		<h2>Paninis </h2>
 		<% Menu.where(category: 'Paninis').all.each do |panini| %>
-		<div class="col-md-2">
+		<div class="col-md-2 menu-item">
+		<div class="margin-text"></div>
 			Name: <%= panini.menu_item %><br>
 			Category: <%= panini.category %><br>
 			Description: <%= panini.description %><br>
-			Price: <%= panini.price %><br>
-			<a href="/menus/<%= panini.id %>/edit" class="btn content-btn">Edit Item</a><br><br>
+			Price: <%= panini.price %><br><br>
+			<center><a href="/menus/<%= panini.id %>/edit" class="btn content-btn" style="color:white">Edit Item</a><br><br></center>
 		</div>
 
 		<% end %>
@@ -46,16 +48,18 @@
 		
 
 		<% Menu.where(category: 'Salads').all.each do |salad| %>
-		<div class="col-md-2">
+		<div class="col-md-2 menu-item">
+		<div class="margin-text"></div>
 			Name: <%= salad.menu_item %><br>
 			Category: <%= salad.category %><br>
 			Description: <%= salad.description %><br>
-			Price: <%= salad.price %><br>
-			<a href="/menus/<%= salad.id %>/edit" class="btn content-btn">Edit Item</a><br><br>
+			Price: <%= salad.price %><br><br>
+			<center><a href="/menus/<%= salad.id %>/edit" class="btn content-btn" style="color:white">Edit Item</a><br><br></center>
 		</div>
 
 		<% end %>
 	</div>
+<br>
 
 
 
@@ -65,5 +69,9 @@
 		Last Name: <%= email.lname %><br>
 		Email: <%= email.email %>
 	<% end %>
+
+
+
+	api key: AIzaSyDQxxFBgvR3G8TaQ7Eg7xwD2pRxZsX1bNk
 
 </div>

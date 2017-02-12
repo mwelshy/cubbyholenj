@@ -1,4 +1,29 @@
-<h2>Sign up</h2>
+<centeR><h1>Sorry Brochacho, no can do.</h1></centeR>
+
+<div class="whitespace"></div>
+
+
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 39.964, lng: -74.944};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQxxFBgvR3G8TaQ7Eg7xwD2pRxZsX1bNk&callback=initMap">
+    </script>
+
+
+
+<!-- <h2>Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
@@ -26,4 +51,4 @@
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<%= render "devise/shared/links" %> -->

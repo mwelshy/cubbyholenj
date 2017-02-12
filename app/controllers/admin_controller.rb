@@ -20,9 +20,9 @@ class AdminController < ApplicationController
 
   end
 
-  def destroy
+  def product_destroy
     @menu = Menu.find(params[:id])
-    @menu.delete
+    @menu.delete(@menu)
     redirect_to admin_path
 
   end
