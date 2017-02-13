@@ -22,10 +22,6 @@
 							<li><a id="aboutit" href="/menu"><i class="fa fa-newspaper-o" style="font-size: 22px"></i>  Menu </a></li>
 						</li>
 						<li><a id="contactit"><i class="fa fa-phone" style="font-size: 22px"></i>  Contact</a></li>
-						<% if current_user %>
-						<li><a href="/admin/<%= current_user.id.to_s %>">Admin Page</a></li>
-						<li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
-						<% end %>
 					</ul>
 				</div>
 			</div>
@@ -75,7 +71,8 @@
 				<h3>Our Menu</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla provident ut eveniet iste deleniti porro. Adipisci iste aut laudantium rem natus, tenetur, necessitatibus provident, nostrum expedita eaque ex consequatur ut! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores tempora, pariatur nam magnam atque fugit provident mollitia repudiandae, sapiente unde labore. Numquam alias nulla cumque quis veritatis veniam unde illo.</p>
 				</div>
-				<div class="margin-text"></div>
+				<!-- <div class="margin-text"></div> -->
+				<div class="btn-margin"></div>
 				<center><button class="btn btn-lg content-btn"><a href='/menu'><i class="fa fa-arrow-circle-down" style="font-size: 22px"></i> Check out our Menu</a></button></center>
 			</div>
 		</div>
@@ -160,13 +157,7 @@
 
 							</tbody>
 
-						</table>
-
-<!-- 					<h4>55 E Main St #1<h4>
-					<h4>Moorestown, New Jersey 08057</h4>
-					<h4><i class="fa fa-mobile" style="font-size: 22px"></i> Phone: (856) 234-4372</h4>
-					<div class="margin-text"></div> -->
-					
+						</table>					
 				</div>
 			</div>
 		</div>
